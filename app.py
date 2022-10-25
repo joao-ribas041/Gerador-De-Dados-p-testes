@@ -60,10 +60,11 @@ while True:
 [4] - Gerar cidade
 [5] - Gerar estado
           """)
-    opc = int(input('Selecione uma opção: '))
+    opc = []
+    opc.append(int(input('Selecione uma opção: ')))
     print(opc)
     
-    if opc == 1:
+    if opc in 1:
         print(gerador_de_nomes()[0])
     elif opc == 2:
         print(gerador_de_emails()[0])
