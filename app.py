@@ -53,12 +53,25 @@ def finalizar_aplicacao():
 
 
 while True:
-    print('\n\n')
+    print("""
+[1] - Gerar nome
+[2] - Gerar e-mail
+[3] - Gerar telefone
+[4] - Gerar cidade
+[5] - Gerar estado
+          """)
+    opc = int(input('Selecione uma opção: '))
+    print(opc)
+    
+    if opc == 1:
+        print(gerador_de_nomes()[0])
+    
+    """ print('\n\n')
     print(gerador_de_nomes()[0])
     print(gerador_de_emails()[0])
     print(gerador_de_telefones()[0])
     print(gerador_de_cidades()[0])
-    print(gerador_de_estados()[0])
+    print(gerador_de_estados()[0]) """
 
     if finalizar_aplicacao() == True:
         break
