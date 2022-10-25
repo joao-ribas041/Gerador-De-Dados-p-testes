@@ -65,9 +65,18 @@ while True:
     
     if opc == 1:
         print(gerador_de_nomes()[0])
+    elif opc == 2:
+        print(gerador_de_emails()[0])
+    elif opc == 3:
+        print(gerador_de_telefones()[0])
+    elif opc == 4:
+        print(gerador_de_cidades()[0])
+    elif opc == 5:
+        print(gerador_de_estados()[0])
+    else:
+        print('opção invalida')
     
     """ print('\n\n')
-    print(gerador_de_nomes()[0])
     print(gerador_de_emails()[0])
     print(gerador_de_telefones()[0])
     print(gerador_de_cidades()[0])
