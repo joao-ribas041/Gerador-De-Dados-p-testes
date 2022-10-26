@@ -1,4 +1,7 @@
 import random
+import os
+
+
 # Gerador de dados
 # Gerar Nomes
 def gerador_de_nomes():
@@ -36,8 +39,20 @@ def gerador_de_estados():
 
 # Salvar Arquivos?
 def salvar_arquivos(r1, r2, r3, r4, r5):
-    
-    pass
+    with open('Gerador De Dados p-testes/Dados.txt', 'a', newline='') as arquivo:
+        if r1 != '':
+            arquivo.write(r1 + os.linesep)
+        if r2 != '':
+            arquivo.write(r2 + os.linesep)
+        if r3 != '':
+            arquivo.write(r3 + os.linesep)
+        if r4 != '':
+            arquivo.write(r4 + os.linesep)
+        if r5 != '':
+            arquivo.write(r5 + os.linesep)
+        arquivo.write('-'*25 + os.linesep)
+        
+            
 
 
 while True:
