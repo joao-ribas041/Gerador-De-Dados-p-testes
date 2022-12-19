@@ -55,43 +55,43 @@ def salvar_arquivos(r1, r2, r3, r4, r5):
             
 
 
-while True:
-    result1 = result2 = result3 = result4 = result5 = ''
-    print('Bem-vindo \nGerador de Dados p. testes \nPara Finalizar digite "parar".')
-    print('-'*35)
-    print("""[1] - Gerar nome
-[2] - Gerar e-mail
-[3] - Gerar telefone
-[4] - Gerar cidade
-[5] - Gerar estado""")
-    opc = str(input('Selecione uma opção: '))
-    salvar = str(input('Deseja salvar os dados em um arquivo de texto?[s/n] '))
-    print(salvar)
+# while True:
+#     result1 = result2 = result3 = result4 = result5 = ''
+#     print('Bem-vindo \nGerador de Dados p. testes \nPara Finalizar digite "parar".')
+#     print('-'*35)
+#     print("""[1] - Gerar nome
+# [2] - Gerar e-mail
+# [3] - Gerar telefone
+# [4] - Gerar cidade
+# [5] - Gerar estado""")
+#     opc = str(input('Selecione uma opção: '))
+#     salvar = str(input('Deseja salvar os dados em um arquivo de texto?[s/n] '))
+#     print(salvar)
     
-    print('\n')
-    print('-'*35)
+#     print('\n')
+#     print('-'*35)
     
-    if "parar" in opc:
-        print('Finalizando o programa.')
-        break
-    if str(1) in opc:
-        result1 = gerador_de_nomes()[0]
-        print(result1)
-    if str(2) in opc:
-        result2 = gerador_de_emails()[0]
-        print(result2)
-    if str(3) in opc:
-        result3 = gerador_de_telefones()[0]
-        print(result3)
-    if str(4) in opc:
-        result4 = gerador_de_cidades()[0]
-        print(result4)
-    if str(5) in opc:
-        result5 = gerador_de_estados()[0]
-        print(result5)
+#     if "parar" in opc:
+#         print('Finalizando o programa.')
+#         break
+#     if str(1) in opc:
+#         result1 = gerador_de_nomes()[0]
+#         print(result1)
+#     if str(2) in opc:
+#         result2 = gerador_de_emails()[0]
+#         print(result2)
+#     if str(3) in opc:
+#         result3 = gerador_de_telefones()[0]
+#         print(result3)
+#     if str(4) in opc:
+#         result4 = gerador_de_cidades()[0]
+#         print(result4)
+#     if str(5) in opc:
+#         result5 = gerador_de_estados()[0]
+#         print(result5)
     
-    if 's' in salvar:
-        salvar_arquivos(result1, result2,  result3, result4, result5)
-    print('-'*35)
+#     if 's' in salvar:
+#         salvar_arquivos(result1, result2,  result3, result4, result5)
+#     print('-'*35)
 
-print('App finalizado.')
+# print('App finalizado.')

@@ -10,39 +10,42 @@
 </head>
 
 <body>
-    <h1>Gerador de Dados para Testes</h1> <br>
-    <fieldset>
-        <legend>Dados pessoais</legend>
-        <label>
-            1 - Nome: <br>
-            <input type="text">
-        </label>
+    <div>
+        <h1>Gerador de Dados para Testes</h1> <br>
 
-        <label>
-            2 - E-mail: <br>
-            <input type="text">
-        </label>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <label>
+                1 - Nome: <br>
+                <input type="text" value="{{ dados['nome'] }}">
+            </label>
 
-        <label>
-            3 - Telefone: <br>
-            <input type="text">
-        </label>
-    </fieldset>
+            <label>
+                2 - E-mail: <br>
+                <input type="text" value="{{ dados['email'] }}">
+            </label>
 
-    <fieldset>
-        <legend>Dados de endereço</legend>
-        <label>
-            4 - Cidade: <br>
-            <input type="text">
-        </label>
+            <label>
+                3 - Telefone: <br>
+                <input type="text" value="{{ dados['telefone'] }}">
+            </label>
+        </fieldset>
 
-        <label>
-            5 - Estado: <br>
-            <input type="text">
-        </label>
-    </fieldset>
+        <fieldset>
+            <legend>Dados de endereço</legend>
+            <label>
+                4 - Cidade: <br>
+                <input type="text" value="{{ dados['cidade'] }}">
+            </label>
 
-    <button>Gerar</button>
+            <label>
+                5 - Estado: <br>
+                <input type="text" value="{{ dados['estado'] }}">
+            </label>
+        </fieldset>
+
+        <button onclick="gerarDados" id="gerarDados">Gerar</button>
+    </div>
 </body>
 
 </html>
