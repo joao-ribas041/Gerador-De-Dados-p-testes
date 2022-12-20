@@ -10,6 +10,20 @@
 </head>
 
 <body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+        $(function() {
+          $('a#teste').on('click', function(e) {
+            e.preventDefault()
+            $.getJSON('/gerar',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+    </script>
+
     <div>
         <h1>Gerador de Dados para Testes</h1> <br>
 
@@ -17,17 +31,17 @@
             <legend>Dados pessoais</legend>
             <label>
                 1 - Nome: <br>
-                <input type="text" value="{{ dados['nome'] }}">
+                <input type="text" value="{{dados['nome']}}">
             </label>
 
             <label>
                 2 - E-mail: <br>
-                <input type="text" value="{{ dados['email'] }}">
+                <input type="text" value="{{dados['email']}}">
             </label>
 
             <label>
                 3 - Telefone: <br>
-                <input type="text" value="{{ dados['telefone'] }}">
+                <input type="text" value="{{dados['telefone']}}">
             </label>
         </fieldset>
 
@@ -35,16 +49,18 @@
             <legend>Dados de endereço</legend>
             <label>
                 4 - Cidade: <br>
-                <input type="text" value="{{ dados['cidade'] }}">
+                <input type="text" value="{{dados['cidade']}}">
             </label>
 
             <label>
                 5 - Estado: <br>
-                <input type="text" value="{{ dados['estado'] }}">
+                <input type="text" value="{{dados['estado']}}">
             </label>
         </fieldset>
 
-        <button onclick="gerarDados" id="gerarDados">Gerar</button>
+        <form>
+            <a href=# id=teste><button>Gerar</button></a>
+        </form>
     </div>
 </body>
 
