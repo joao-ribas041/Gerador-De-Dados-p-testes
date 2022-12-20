@@ -11,7 +11,7 @@ def index():
     return render_template('index.html', dados=dados)
 
 
-@app.route("/gerar")
+@app.route("/#")
 def testeBotao():
     dados = {
         'nome': '',
