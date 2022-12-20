@@ -1,2 +1,3 @@
 # Ambiente Virtual
 heroku-host-gerador/
+*.pyc
