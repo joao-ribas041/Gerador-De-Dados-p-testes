@@ -4,15 +4,29 @@ from dados import gerarNomes, gerarEmails, gerarTelefones, gerarCidades, gerarEs
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
-    dados = {}
-    return render_template('index.html', name=name)
+    dados = testeBotao()
+    return render_template('index.html', dados=dados)
 
-@app.route("/dados")
-def gerarDados():
-    dados = resgatarDados()
-    return render_template('index.html', dados)
+
+@app.route("/gerar")
+def testeBotao():
+    dados = {
+        'nome': '',
+        'email': '',
+        'telefone': '',
+        'cidade': '',
+        'estado': ''
+    }
+    if not bool(dados):
+        print('vazio')
+    else:
+        dados = resgatarDados()
+        print('cheio')
+    return dados
+
 
 def resgatarDados():
     dados = {}
@@ -22,6 +36,7 @@ def resgatarDados():
     dados['cidade'] = gerarCidades()
     dados['estado'] = gerarEstados()
     return dados
+
 
 if __name__ == "__main__":
     app.run(port=5000, host='localhost', debug=True)
