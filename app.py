@@ -20,12 +20,12 @@ def testeBotao():
         'cidade': '',
         'estado': ''
     }
-    if not bool(dados):
-        print('vazio')
-    else:
-        dados = resgatarDados()
-        print('cheio')
-    return dados
+    # if not bool(dados):
+    #     print('vazio')
+    # else:
+    #     dados = resgatarDados()
+    #     print('cheio')
+    # return dados
 
 
 def resgatarDados():
