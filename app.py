@@ -4,6 +4,8 @@ from dados import gerarNomes, gerarEmails, gerarTelefones, gerarCidades, gerarEs
 
 app = Flask(__name__)
 
+dados = {}
+
 
 @app.route("/")
 def index():
