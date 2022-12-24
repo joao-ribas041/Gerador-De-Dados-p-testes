@@ -1,3 +1,4 @@
+from time import sleep
 from random import choices
 
 
@@ -34,3 +35,22 @@ def gerarEstados():
         'Sergipe', 'Tocantins', 'Distrito Federal'
     ]
     return choices(estados)[0]
+
+
+def GerarSenha(tam):
+    alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@$%&*-_=+'
+    senha = ''
+
+    for i in range(1, tam+1):
+        carac = choices(alpha)
+        senha += str(carac[0])
+    return senha
+
+
+""" t = int(input('Que tamanho deseja a senha: '))
+print('Gerando...')
+sleep(1)
+senha = GerarSenha(t)
+print('Sua senha é: ')
+print(senha)
+ """
