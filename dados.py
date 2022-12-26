@@ -60,17 +60,8 @@ def GerarSenha(mai=0, min=0, n=0, c=0, tam=8):
         senha += geral[randint(0, len(geral))]
     return senha
 
-    """ 
-    alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@$%&*-_=+'
-    senha = ''
 
-    for i in range(1, tam+1):
-        carac = choices(alpha)
-        senha += str(carac[0])
-    return senha
- """
-
-
+""" 
 while True:
     # ma = int(input('Deseja selecionar maiuscula? [1/0] '))
     # mi = int(input('Deseja selecionar minuscula? [1/0] '))
@@ -88,4 +79,4 @@ while True:
     if resp in 'Nn':
         break
 
-print('Finalizado')
+print('Finalizado') """
