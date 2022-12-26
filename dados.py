@@ -1,5 +1,5 @@
 from time import sleep
-from random import choices
+from random import choices, randint
 
 
 def gerarNomes():
@@ -37,7 +37,30 @@ def gerarEstados():
     return choices(estados)[0]
 
 
-def GerarSenha(tam):
+def GerarSenha(mai=0, min=0, n=0, c=0, tam=8):
+    maiuscula = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    minuscula = 'abcdefghijklmnopqrstuvwxyz'
+    numeros = '1234567890'
+    caracteres = '!@#$%^&*()_-=+'
+    geral = senha = ''
+
+    if mai == 1:
+        geral += maiuscula
+
+    if min == 1:
+        geral += minuscula
+
+    if n == 1:
+        geral += numeros
+
+    if c == 1:
+        geral += caracteres
+
+    for i in range(0, tam):
+        senha += geral[randint(0, len(geral))]
+    return senha
+
+    """ 
     alpha = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@$%&*-_=+'
     senha = ''
 
@@ -45,12 +68,24 @@ def GerarSenha(tam):
         carac = choices(alpha)
         senha += str(carac[0])
     return senha
-
-
-""" t = int(input('Que tamanho deseja a senha: '))
-print('Gerando...')
-sleep(1)
-senha = GerarSenha(t)
-print('Sua senha é: ')
-print(senha)
  """
+
+
+while True:
+    # ma = int(input('Deseja selecionar maiuscula? [1/0] '))
+    # mi = int(input('Deseja selecionar minuscula? [1/0] '))
+    nu = int(input('Deseja selecionar numeros? [1/0] '))
+    # ca = int(input('Deseja selecionar caracteres? [1/0] '))
+    t = int(input('Qual o tamanho da senha? '))
+
+    # senha = GerarSenha(ma, mi, nu, ca, 8)
+    senha = GerarSenha(n=nu, tam=t)
+    print(senha)
+    print()
+    resp = str(input('Deseja continuar? [S/N] ')).upper().strip()
+    print()
+
+    if resp in 'Nn':
+        break
+
+print('Finalizado')
